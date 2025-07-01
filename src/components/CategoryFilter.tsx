@@ -1,12 +1,12 @@
 
-import { Football, Basketball, Gamepad2, Book, Coffee, Music, Camera, Bike } from 'lucide-react';
+import { Users, Gamepad2, Book, Coffee, Music, Camera, Bike } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
 const categories = [
   { id: 'all', name: '전체', icon: null, color: 'bg-toss-gray-100 text-toss-gray-700' },
-  { id: 'sports', name: '스포츠', icon: Football, color: 'bg-baemin-mint-light text-baemin-mint' },
-  { id: 'basketball', name: '농구', icon: Basketball, color: 'bg-baemin-orange-light text-baemin-orange' },
+  { id: 'sports', name: '스포츠', icon: Users, color: 'bg-baemin-mint-light text-baemin-mint' },
+  { id: 'basketball', name: '농구', icon: Users, color: 'bg-baemin-orange-light text-baemin-orange' },
   { id: 'game', name: '게임', icon: Gamepad2, color: 'bg-purple-100 text-purple-600' },
   { id: 'book', name: '독서', icon: Book, color: 'bg-green-100 text-green-600' },
   { id: 'cafe', name: '카페', icon: Coffee, color: 'bg-amber-100 text-amber-600' },
