@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,7 +19,37 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'pretendard': ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+			},
 			colors: {
+				// Toss-inspired colors
+				toss: {
+					blue: '#3182f6',
+					'blue-dark': '#1f5eef',
+					'blue-light': '#e8f3ff',
+					gray: {
+						50: '#f9fafb',
+						100: '#f1f3f4',
+						200: '#e5e8eb',
+						300: '#d1d6db',
+						400: '#b0b8c1',
+						500: '#8b95a1',
+						600: '#6b7684',
+						700: '#4e5968',
+						800: '#333d4b',
+						900: '#191f28'
+					}
+				},
+				// Baemin-inspired colors
+				baemin: {
+					mint: '#2ac1bc',
+					'mint-light': '#e0f9f8',
+					orange: '#ff6b35',
+					'orange-light': '#fff2ee',
+					yellow: '#ffc342',
+					'yellow-light': '#fff8e7'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +115,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'scale-in': 'scale-in 0.2s ease-out'
 			}
 		}
 	},
