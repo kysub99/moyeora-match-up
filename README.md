@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
+# 🎯 서비스 기획서: 모여라잇 (Moyeora.it)
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/a49219a1-b076-4a71-a53c-691a8df62ed5
+## 📌 서비스 개요
 
-## How can I edit this code?
+**지역 기반으로 취미 활동을 함께할 사람을 구하는 웹 서비스**
 
-There are several ways of editing your application.
+축구, 농구, 롤(LOL), 독서모임 등 **관심사를 공유하는 사람들과 빠르게 연결**하여,  
+“같이 할 사람 없어서 못하는 취미”를 사라지게 만듭니다.
 
-**Use Lovable**
+> 서비스 URL  
+> https://moyeora-match-up.lovable.app/
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a49219a1-b076-4a71-a53c-691a8df62ed5) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 👥 페르소나
 
-**Use your preferred IDE**
+### 1. 주 사용자: 대학생 조로 (23세)
+- **직업**: 대학생 (컴퓨터공학과 3학년)
+- **라이프스타일**: 주말마다 풋살을 하고 싶지만 매번 인원이 부족해 모임이 취소됨
+- **목표**: 시간 맞는 사람들과 빠르게 매칭되어 취미 활동을 꾸준히 하고 싶음
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**취미**: 풋살, 롤(LOL)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**니즈**
+- 풋살이나 롤 같이 할 사람을 간편하게 구하고 싶음
+- 매번 단톡방 만들고 공지하는 과정이 번거로움
+- 나와 **같은 수준의 유저들**과 연결되면 좋겠음
 
-Follow these steps:
+**페인 포인트**
+- 사람들이 모집글을 봤는지, 오는 건지 모름
+- 타이밍이 안 맞아 번개 모임이 성사되지 않음
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 2. 부 사용자: 직장인 윌슨 (29세)
+- **직업**: 마케터
+- **라이프스타일**: 퇴근 후 롤 또는 주말에 보드게임 모임 참여
+- **목표**: 가볍게 참여할 수 있는 취미 모임에 즉시 참여하고 싶음
 
-# Step 3: Install the necessary dependencies.
-npm i
+**취미**: 롤(LOL), 보드게임
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+**니즈**
+- 모임 주최보다는 참여만 하고 싶음
+- 일정/위치/활동 종류별 필터가 있었으면 좋겠음
 
-**Edit a file directly in GitHub**
+**페인 포인트**
+- 기존 모임 앱은 광고성 모집글이나 부담스러운 그룹이 많음
+- 소규모 번개 모임을 찾기 어려움
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📖 사용자 시나리오 및 스토리
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 시나리오 1: 조로의 풋살 팀원 구하기
+- **상황**: 이번 주 토요일 오후 4시에 풋살장을 예약했지만, 3명이 부족함
+- **절차**:
+    1. 로그인 후 “새로운 구인 글 작성” 클릭
+    2. 제목: “토요일 4시 성수 풋살 3명 구해요”
+    3. 태그: #풋살 #초중급 #20대환영
+    4. 위치: 성수동 풋살장 / 시간: 7월 6일 토요일 16:00
+    5. 등록 후 인근 사용자들에게 알림 전송
+    6. 참여 요청 수락 후 채팅방 생성 → 모임 성사
 
-## What technologies are used for this project?
+**사용자 스토리**  
+_"매번 풋살 인원 맞추느라 힘들었는데, 5분 만에 사람 구하고 바로 채팅까지 되니까 너무 편했어요."_
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 시나리오 2: 윌슨의 롤 듀오 매칭
+- **상황**: 저녁 퇴근 후 롤 같이 할 사람이 없어 고랭 솔랭만 도는 중
+- **절차**:
+    1. 알림: “오늘 밤 10시 골드~플래티넘 듀오 구해요”
+    2. 상세 확인 → “서폿 가능하신 분? 저는 원딜입니다”
+    3. 참여 요청 → 수락 후 디스코드 링크 공유 → 게임 진행
 
-## How can I deploy this project?
+**사용자 스토리**  
+_"그날 진짜 한 판만 가볍게 하고 싶었는데, 실력 맞는 듀오 구해서 재밌게 했어요."_
 
-Simply open [Lovable](https://lovable.dev/projects/a49219a1-b076-4a71-a53c-691a8df62ed5) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 💡 핵심 가치 제안
 
-Yes, you can!
+1. **즉흥성 있는 취미 활동을 빠르게 매칭**
+2. **실력, 일정, 관심사 기반으로 나에게 딱 맞는 사람들과 연결**
+3. **부담 없는 참여 방식 – 주최자가 아니어도 쉽게 접근**
+4. **매너 기반 평가 시스템으로 질 높은 커뮤니티 유지**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🛠️ 핵심 기능
+
+1. **모임 게시글 생성 및 필터링**
+    - 제목, 시간, 장소, 인원, 태그 입력
+    - 필터: 활동종류 / 위치 / 실력 / 나이대
+
+2. **관심사/위치 기반 알림**
+    - 선호 활동 + 시간 + 지역에 맞는 게시글 등록 시 푸시 알림
+
+3. **참여 요청/수락 및 자동 채팅방 생성**
+    - 수락 후 자동 채팅방 생성 (오픈채팅 or 인앱)
+
+4. **매너 평가 시스템**
+    - 모임 종료 후 익명 평가 → 매너 지수로 반영
+
+5. **마이페이지**
+    - 내가 참여한 모임, 주최한 모임 기록
+    - 활동 횟수, 참여 비율, 관심사 랭킹 등 제공
+
+---
+
+## 🎯 구현 범위 (MVP)
+
+### Phase 1: 모임 게시판 MVP
+- 회원가입 / 로그인
+- 모임 등록 / 리스트 / 필터링
+- 참여 요청 / 수락 기능
+
+### Phase 2: 채팅 및 알림 기능
+- 채팅방 생성 (모임 성사 시)
+- 관심사 기반 알림
+- 리마인드 알림
+
+### Phase 3: 매너 평가 & 마이페이지
+- 참여자 평가 시스템
+- 내 활동 통계 및 매너 점수 조회
